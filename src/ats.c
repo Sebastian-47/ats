@@ -87,19 +87,19 @@ static void setTriggers( ats_t *self ){
 
 			} else if( i <= 0 ){
 				Qtimer[ i ]	= 300;
-				Rtimer[ i ]	= 1;
+				Rtimer[ i ]	= 0;
 
 			} else if( i <= 10 ){
 				Qtimer[ i ]	= 250;
-				Rtimer[ i ]	= 2;
+				Rtimer[ i ]	= 0;
 
 			} else if( i <= 35 ){
 				Qtimer[ i ]	= 190;
-				Rtimer[ i ]	= 3;
+				Rtimer[ i ]	= 0;
 
 			} else {
 				Qtimer[ i ]	= 120;
-				Rtimer[ i ]	= 5;
+				Rtimer[ i ]	= 0;
 
 			}
 		} else if( i >= min_continuous_thermal_temp && i <= max_continuous_thermal_temp ){
@@ -134,7 +134,7 @@ static void setTriggers( ats_t *self ){
 
 			if( i < ( max - 5 ) ){
 				Qtimer[ i ]	= 6;
-				Rtimer[ i ]	= 120;
+				Rtimer[ i ]	= 600;
 
 			}else{
 				Qtimer[ i ]	= 3;
