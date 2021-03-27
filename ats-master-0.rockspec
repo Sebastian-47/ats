@@ -6,12 +6,12 @@ description = {
 	detailed		= [[
 		This tool, provide support for Rockpro64, Active thermal Service( Fan Control ).
 	]],
-	homepage	= "https://github.com/tuxd3v/ats",
+	homepage	= "https://github.com/Sebastian-47/ats",
 	license		= "See License..",
 	maintainer	= "tuxd3v <tuxd3v@sapo.pt>"
 }
 source = {
-	url	= "git://github.com/tuxd3v/ats",
+	url	= "git://github.com/Sebastian-47/ats",
 	branch	= "master"
 }
 dependencies = {
