@@ -41,8 +41,8 @@ unsigned char pwm = 190;
 
 /* Timer Pointers to all pre-calculated values... */
 unsigned char *Pratio		= ats.profile.pwm_ratio + 30;
-unsigned short int *Qtimer	= ats.profile.quiet_timers +30;
-unsigned short int *Rtimer	= ats.profile.run_timers + 30;
+unsigned short int *Qtimer	= ats.profile.quiet_timers + 30;
+unsigned short int *Rtimer	= ats.profile.run_timers + 600;
 
 /*** CTL Variables..
 **/
@@ -114,19 +114,19 @@ static void setTriggers( ats_t *self ){
 			
 			if ( i <= 45 ){
 				Qtimer[ i ]	= 90;
-				Rtimer[ i ]	= 10;
+				Rtimer[ i ]	= 600;
 
 	  		} else if( i <= 50 ){
 				Qtimer[ i ]	= 50;
-				Rtimer[ i ]	= 20;
+				Rtimer[ i ]	= 600;
 
 	  		}else if( i <= 55 ){
 				Qtimer[ i ]	= 40;
-				Rtimer[ i ]	= 30;
+				Rtimer[ i ]	= 600;
 
 	  		} else if( i <= 60 ){
 				Qtimer[ i ]	= 10;
-				Rtimer[ i ]	= 60;
+				Rtimer[ i ]	= 600;
 			}
 		} else if( i > max_continuous_thermal_temp ){
 
